@@ -30,7 +30,7 @@ services:
       - keycloak-network
 
   db:
-    image: mysql:8
+    image: mysql:${DB_VERSION}
     command: --default-authentication-plugin=mysql_native_password
     environment:
       MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
